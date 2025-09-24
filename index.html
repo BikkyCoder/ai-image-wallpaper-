@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Wallpapers 0094 - Free Motivational Black & White Wallpapers</title>
+    <meta name="description"
+        content="Download free black and white motivational wallpapers to inspire your hustle. High-quality designs for desktops, mobiles, and more. Join the MotivaWall movement!">
+    <meta name="keywords"
+        content="motivational wallpapers, black and white wallpapers, free wallpaper download, inspirational backgrounds, hustle motivation, desktop wallpapers, mobile backgrounds, 2025 motivation">
+    <meta name="author" content="MotivaWall">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://motivawall.com">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="MotivaWall - Free Motivational Black & White Wallpapers">
+    <meta property="og:description"
+        content="Transform your screen with free black and white motivational wallpapers. Download now and fuel your hustle! #MotivationalWallpapers">
+    <meta property="og:image" content="https://motivawall.com/images/hero-bg.jpg">
+    <meta property="og:url" content="https://motivawall.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MotivaWall - Free Motivational Wallpapers">
+    <meta name="twitter:description"
+        content="Get inspired with free black and white wallpapers for your devices. Download now! #BlackWhiteVibes">
+    <meta name="twitter:image" content="https://motivawall.com/images/hero-bg.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-black: #000000;
+            --primary-white: #FFFFFF;
+            --glow-color: rgba(255, 255, 255, 0.2);
+            --neon-glow: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            background-color: var(--primary-white);
+            color: var(--primary-black);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            height: 60px;
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-white) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-white);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-white);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Modal styles */
+        .modal-content {
+            animation: modalFadeIn 0.3s ease;
+            position: relative;
+            z-index: 55;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #wallpaper-modal {
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling on iOS */
+        }
+
+        #wallpaper-modal img {
+            transition: transform 0.3s ease;
+            object-fit: contain;
+            max-height: calc(100vh - 12rem);
+            /* Account for padding and controls */
+            width: auto;
+            margin: 0 auto;
+        }
+
+        @media (hover: hover) {
+            #wallpaper-modal img:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            #wallpaper-modal {
+                padding: 0;
+            }
+
+            #wallpaper-modal img {
+                max-height: calc(100vh - 10rem);
+                border-radius: 8px;
+            }
+
+            #modal-quote {
+                font-size: 1.25rem;
+                padding: 0 1rem;
+            }
+        }
+
+        /* Ensure buttons are always clickable */
+        #wallpaper-modal button {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        /* Improved touch targets for mobile */
+        @media (max-width: 640px) {
+            #wallpaper-modal button {
+                min-height: 44px;
+                /* iOS minimum touch target size */
+                min-width: 44px;
+            }
+        }
+
+        /* Modal Responsive Styles */
+        #wallpaper-modal {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #wallpaper-modal img {
+            transition: transform 0.3s ease;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        #wallpaper-modal button {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        @media (max-width: 640px) {
+            #wallpaper-modal {
+                touch-action: none;
+            }
+
+            #wallpaper-modal img {
+                width: 84%;
+                height: auto;
+                max-height: 50vh;
+                margin: 1rem auto;
+                position: relative;
+                left: -65px;
+            }
+
+            #wallpaper-modal button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+
+        @media (min-width: 641px) {
+            #wallpaper-modal button[onclick="closeModal()"] {
+                top: 1rem;
+                right: 1rem;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.5rem;
+            }
+
+            @media (hover: hover) {
+                #wallpaper-modal img:hover {
+                    transform: scale(1.02);
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 706%;
+                width: 34%;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                z-index: 49;
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .close-btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 1.5rem;
+                color: var(--primary-white);
+                cursor: pointer;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero h1 {
+            background: linear-gradient(45deg, #FFFFFF, #CCCCCC);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 5s ease infinite;
+        }
+
+        .hero p {
+            color: var(--primary-white);
+        }
+
+        @keyframes gradientText {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wallpaper-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 25px var(--glow-color);
+            border: 3px solid transparent;
+            background: linear-gradient(var(--primary-white), var(--primary-white)) padding-box,
+                linear-gradient(45deg, var(--primary-black), #333333) border-box;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .wallpaper-card:hover {
+            transform: translateY(-12px) scale(1.04);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 35px var(--neon-glow);
+        }
+
+        .wallpaper-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .wallpaper-card:hover .wallpaper-overlay {
+            opacity: 1;
+        }
+
+        .download-btn {
+            background: var(--primary-white);
+            color: var(--primary-black);
+            border: 2px solid var(--primary-black);
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), 0 0 15px var(--neon-glow);
+            z-index: 10;
+        }
+
+        .download-btn:hover {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 25px var(--neon-glow);
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section {
+            scroll-margin-top: 60px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shine 5s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-btn {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            border-radius: 50px;
+            padding: 16px 32px;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 0 15px var(--neon-glow);
+        }
+
+        .social-btn:hover {
+            background: #333333;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px var(--neon-glow);
+        }
+
+        .share-btn {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            border-radius: 50px;
+            padding: 8px 16px;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        .share-btn:hover {
+            background: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px var(--neon-glow);
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner {
+            border: 5px solid #F0F0F0;
+            border-top: 5px solid var(--primary-black);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            background: var(--primary-black);
+            color: var(--primary-white);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+                padding: 0 1rem;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .wallpaper-card {
+                height: 300px;
+            }
+
+            .blog-card img {
+                height: 150px;
+            }
+
+            .features-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card,
+            .contact-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .download-btn,
+            .social-btn,
+            .share-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .section h2 {
+                font-size: 2.5rem;
+            }
+
+            .blog-card,
+            .testimonial-card,
+            .faq-item {
+                padding: 1rem;
+            }
+
+            .navbar .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-link {
+                font-size: 0.8rem;
+            }
+        }
+
+        .more-images {
+            text-align: center;
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MotivaWall",
+        "url": "https://motivawall.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://motivawall.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "MotivaWall Wallpaper Vault",
+        "url": "https://motivawall.com/#gallery",
+        "image": [
+            {"@type": "ImageObject", "url": "https://motivawall.com/images/1.jpg", "name": "Rise Above the Storm"},
+            {"@type": "ImageObject", "url": "https://motivawall.com/images/2.jpg", "name": "Waves of Success"},
+            {"@type": "ImageObject", "url": "https://motivawall.com/images/3.jpg", "name": "Grind in Silence"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Building Unbreakable Habits with Motivational Wallpapers",
+            "description": "Learn how motivational wallpapers can rewire your brain for success with daily visual reminders.",
+            "url": "https://motivawall.com/#blog",
+            "image": "https://motivawall.com/images/blog1.jpg",
+            "datePublished": "2025-09-18",
+            "author": {"@type": "Person", "name": "MotivaWall Team"}
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 5 Quotes for Hustlers in 2025",
+            "description": "Curated motivational quotes paired with black and white wallpapers to fuel your hustle.",
+            "url": "https://motivawall.com/#blog",
+            "image": "https://motivawall.com/images/blog2.jpg",
+            "datePublished": "2025-09-18",
+            "author": {"@type": "Person", "name": "MotivaWall Team"}
+        }
+    ]
+    </script>
+</head>
+
+<body class="bg-white text-black">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="logo text-2xl md:text-3xl font-bold text-white"><i
+                    class="fas fa-fire mr-2"></i>MotivaWall</a>
+            <div class="hamburger md:hidden">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu md:flex md:space-x-6 hidden md:flex-row flex-col md:gap-0 gap-2">
+                <li><a href="#home" class="nav-link text-gray-200 text-base">Home</a></li>
+                <li><a href="#gallery" class="nav-link text-gray-200 text-base">Gallery</a></li>
+                <li><a href="#features" class="nav-link text-gray-200 text-base">Features</a></li>
+                <li><a href="#blog" class="nav-link text-gray-200 text-base">Blog</a></li>
+                <li><a href="#about" class="nav-link text-gray-200 text-base">About</a></li>
+                <li><a href="#testimonials" class="nav-link text-gray-200 text-base">Testimonials</a></li>
+                <li><a href="#faq" class="nav-link text-gray-200 text-base">FAQ</a></li>
+                <li><a href="#contact" class="nav-link text-gray-200 text-base">Follow Me</a></li>
+                <li class="close-btn md:hidden"><i class="fas fa-times"></i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="fade-in">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">Fuel Your Fire</h1>
+            <p class="text-xl md:text-3xl mb-10 max-w-2xl mx-auto" style="color: white;">Welcome to MotivaWall, your
+                go-to source for free black and white motivational wallpapers designed to ignite your hustle. Transform
+                your desktop or mobile screen with high-quality designs featuring powerful quotes that keep your goals
+                in focus. Perfect for students, entrepreneurs, and dreamers—download now and join thousands fueling
+                their daily grind. #MotivationalWallpapers #BlackWhiteVibes</p>
+            <a href="#gallery"
+                class="bg-black text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg">Explore
+                Wallpapers</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Why Choose MotivaWall?</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Unleash your potential with our unique features tailored
+                for hustlers.</p>
+            <div class="features-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <i class="fas fa-download text-4xl text-black mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Free Instant Downloads</h3>
+                    <p class="text-gray-600">Grab high-res motivational wallpapers in PNG format for any device—no
+                        sign-ups, no limits. Start inspiring your screen today!</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-mobile-alt text-4xl text-black mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Device-Optimized Designs</h3>
+                    <p class="text-gray-600">Our black and white wallpapers look stunning on mobiles, tablets, and
+                        desktops. Seamless fit for iPhone, Android, and more.</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-share-alt text-4xl text-black mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Viral Sharing</h3>
+                    <p class="text-gray-600">Share your favorite wallpapers on Instagram, Twitter, or Facebook with one
+                        click. Spread the hustle! #HustleMindset</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Wallpaper Vault</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Explore our curated collection of 10 black and white
+                motivational wallpapers, crafted to fuel your daily grind. From resilience-inspired mountain peaks to
+                momentum-driven ocean waves, each wallpaper pairs stunning visuals with powerful quotes. Optimized for
+                1920x1080 screens, they’re perfect for desktops, mobiles, or posters. Hover to see the quote, download
+                for free, and set your vibe. #MotivationalWallpapers #BlackWhiteVibes</p>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic load -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="more-images">
+                <a href="/moreimages.html"
+                    class="mt-10 bg-black text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg">Load
+                    More Wallpapers</a>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Found your vibe? Share it with the world!</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://twitter.com/intent/tweet?url=https://motivawall.com&text=Just downloaded an epic motivational wallpaper from MotivaWall! #MotivationalWallpapers #BlackWhiteVibes"
+                        class="share-btn" target="_blank">
+                        <i class="fab fa-twitter mr-2"></i> Twitter
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://motivawall.com" class="share-btn"
+                        target="_blank">
+                        <i class="fab fa-facebook mr-2"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/" class="share-btn" target="_blank">
+                        <i class="fab fa-instagram mr-2"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 bg-gray-50 section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Motivation Hub</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Dive into our blog for tips, stories, and hacks to keep
+                your hustle alive. Fresh content to inspire your mindset daily. #Motivation2025</p>
+            <div class="blog-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="blog-card">
+                    <img src="images/blog1.jpg" alt="Building unbreakable habits with motivational wallpapers"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Building Unbreakable Habits</h3>
+                    <p class="text-gray-600 mb-4">Your screen is your daily canvas—use it to build habits that last.
+                        Discover how motivational wallpapers with quotes like "Grind in Silence" can anchor your morning
+                        routine. We share 5 proven strategies from users who turned visual reminders into lifelong
+                        habits, plus a 7-day challenge to kickstart your journey. #MotivationalWallpapers #HabitBuilding
+                    </p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #HustleMindset #MotivationDaily</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog2.jpg" alt="Top 5 motivational quotes for hustlers 2025"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Top 5 Quotes for Hustlers in 2025</h3>
+                    <p class="text-gray-600 mb-4">Words hit harder when they’re on your screen daily. We’ve handpicked 5
+                        motivational quotes for 2025, like "Rise Above the Storm," paired with our black and white
+                        wallpapers. Learn why these quotes inspire entrepreneurs and students, plus a DIY guide to
+                        create your own custom quote wallpaper. #InspirationalQuotes #Hustle2025</p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #MotivationalQuotes #BlackWhiteVibes</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog3.jpg" alt="Why black and white wallpapers boost focus"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Why Black & White Boosts Focus</h3>
+                    <p class="text-gray-600 mb-4">Minimalist designs cut through digital clutter. This post dives into
+                        the science of why black and white wallpapers enhance focus, backed by psychology studies. Learn
+                        3 ways to pair our wallpapers with your workspace for laser-sharp productivity. Perfect for
+                        remote workers and students. #ProductivityHacks #BlackWhiteWallpapers</p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #FocusMindset #MinimalistDesign</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog4.jpg" alt="How to use motivational wallpapers for productivity"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">How to Use Wallpapers Effectively</h3>
+                    <p class="text-gray-600 mb-4">Turn your screen into a productivity powerhouse. Discover 4 creative
+                        ways to use MotivaWall’s black and white wallpapers, like syncing them with your calendar for
+                        weekly goals or rotating them for fresh motivation. Includes user tips from freelancers and
+                        students to maximize impact. #MotivationalWallpapers #ProductivityTips</p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #HustleHard #MotivationDaily</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog5.jpg" alt="Power of visual motivation in 2025"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">The Power of Visual Motivation</h3>
+                    <p class="text-gray-600 mb-4">Visuals shape your mindset. This post explores how motivational
+                        wallpapers act as daily anchors, backed by studies on visual cues. From athletes to CEOs, see
+                        how top performers use our designs to stay driven. Includes a step-by-step guide to create a
+                        digital motivation board. #VisualMotivation #Inspiration2025</p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #MindsetMatters #BlackWhiteVibes</p>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog6.jpg" alt="Turn your screen into a success tool with wallpapers"
+                        class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Turn Your Screen into a Success Tool</h3>
+                    <p class="text-gray-600 mb-4">Your devices are always with you—make them work for your goals. Learn
+                        how to pair MotivaWall’s wallpapers with apps like Notion or Trello for ultimate productivity.
+                        Includes user stories and a 7-day challenge to align your screen setup with your dreams.
+                        #SuccessTools #MotivationalWallpapers</p>
+                    <a href="#blog" class="text-black font-semibold hover:underline">Read More →</a>
+                    <p class="text-gray-500 text-sm mt-2">Share this: #HustleMindset #ProductivityHacks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">What Hustlers Say</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Real stories from users who've leveled up with
+                MotivaWall. #HustleTestimonials</p>
+            <div class="testimonials-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <i class="fas fa-star text-2xl text-yellow-400 mb-4"></i>
+                    <p class="text-gray-600 mb-4">"The 'Grind in Silence' wallpaper keeps me locked in during workouts.
+                        It’s like a daily push-up for my mindset!"</p>
+                    <h4 class="font-bold">— Alex R., Entrepreneur</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-star text-2xl text-yellow-400 mb-4"></i>
+                    <p class="text-gray-600 mb-4">"As a student, these black and white wallpapers cut distractions.
+                        Downloads are so easy—love the vibe!"</p>
+                    <h4 class="font-bold">— Sarah K., College Student</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-star text-2xl text-yellow-400 mb-4"></i>
+                    <p class="text-gray-600 mb-4">"Shared 'Rise Above' on Instagram and got 500 likes! MotivaWall’s
+                        designs are pure viral gold."</p>
+                    <h4 class="font-bold">— Mike T., Fitness Coach</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-gray-50 section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Frequently Asked Questions</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Got questions about our motivational wallpapers? Find
+                answers here. #MotivaWallFAQ</p>
+            <div class="max-w-4xl mx-auto">
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold mb-2">How do I download a wallpaper?</h3>
+                    <p class="text-gray-600">Hover over any wallpaper card, click 'Download', and save the high-res PNG.
+                        Optimized for all devices—no extra steps! #FreeWallpapers</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold mb-2">Are the wallpapers free?</h3>
+                    <p class="text-gray-600">Yes, 100% free! No sign-ups, no hidden fees. Our mission is to spread
+                        motivation worldwide. #MotivationalWallpapers</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold mb-2">Can I use them commercially?</h3>
+                    <p class="text-gray-600">Absolutely—use for personal or commercial purposes, just credit MotivaWall
+                        when sharing publicly. #HustleVibes</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold mb-2">How often do you update the collection?</h3>
+                    <p class="text-gray-600">New wallpapers drop monthly based on user feedback. Suggest your ideas via
+                        email—we love collaborating! #NewWallpapers2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Our Story</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">The heartbeat behind MotivaWall’s mission to empower
+                hustlers with motivational wallpapers. #MotivaWallStory</p>
+            <div class="about-card fade-in">
+                <h3 class="text-3xl font-semibold text-black mb-6">Crafted for the Relentless</h3>
+                <p class="text-gray-600 mb-6 text-lg">MotivaWall was born in a late-night studio, sparked by the endless
+                    scroll of generic motivational content. We wanted more—wallpapers that don’t just decorate but
+                    transform your screen into a command center for success. Our black and white aesthetic delivers
+                    distraction-free, high-impact designs for any setup, from minimalist desks to vibrant workspaces.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">What makes us unique? Every wallpaper is crafted in-house,
+                    optimized for fast loading and sharp visuals on any device. Inspired by themes like resilience
+                    (stormy mountains), flow (ocean waves), and vision (starlit skies), our quotes cut through the
+                    noise. Download once, set it, and let it remind you of your why every day. We’ve reached thousands
+                    globally, from students to entrepreneurs, all united by the hustle. #BlackWhiteWallpapers</p>
+                <p class="text-gray-600 mb-6 text-lg">The future? We’re rolling out user-submitted themes, seasonal
+                    drops, and interactive wallpapers for smart devices. MotivaWall isn’t just a site—it’s a movement.
+                    Join us to turn screens into sparks of inspiration. #HustleMindset</p>
+                <p class="text-gray-500 italic text-lg">Rise. Grind. Shine. 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow Me Section -->
+    <section id="contact" class="py-24 bg-white section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-6 text-black">Join the Hustle</h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Connect with the MotivaWall community and keep the
+                motivation flowing. #JoinMotivaWall</p>
+            <div class="contact-card fade-in">
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <a href="https://instagram.com/motivawall" target="_blank" class="social-btn">
+                        <i class="fab fa-instagram mr-3 text-xl"></i> @motivawall
+                    </a>
+                    <a href="https://youtube.com/@motivawall" target="_blank" class="social-btn">
+                        <i class="fab fa-youtube mr-3 text-xl"></i> MotivaWall
+                    </a>
+                    <a href="mailto:fuel@motivawall.com" class="social-btn">
+                        <i class="fas fa-envelope mr-3 text-xl"></i> fuel@motivawall.com
+                    </a>
+                </div>
+                <p class="text-gray-600 text-lg">MotivaWall is your daily dose of fire in a distracted world. Follow us
+                    on Instagram for mindset hacks, wallpaper creation reels, and user stories that inspire. On YouTube,
+                    catch in-depth videos on habit-building, goal-setting, and interviews with hustlers who’ve turned
+                    screens into success. Got a quote idea or want to share your story? Email us—we reply faster than
+                    your morning coffee hits. #MotivationalWallpapers #HustleVibes</p>
+                <p class="text-gray-600 text-lg">Join our tribe of go-getters who share wins, struggles, and unstoppable
+                    energy. Tag us in your Instagram story with your favorite wallpaper—we might feature you and send a
+                    custom design! Let’s make motivation viral together. #BlackWhiteVibes #Motivation2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-10 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-lg mb-4">&copy; 2025 MotivaWall. All rights fueled. Crafted with passion to light
+                up your world.</p>
+            <p class="text-gray-300 text-sm">Inspired by the grind | Designed for the dreamers | Built for the bold</p>
+            <div class="mt-4">
+                <a href="#home" class="text-gray-300 hover:text-white mx-2">Home</a> |
+                <a href="#gallery" class="text-gray-300 hover:text-white mx-2">Gallery</a> |
+                <a href="#blog" class="text-gray-300 hover:text-white mx-2">Blog</a> |
+                <a href="#about" class="text-gray-300 hover:text-white mx-2">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            document.getElementById('preloader').style.opacity = '0';
+            setTimeout(() => document.getElementById('preloader').style.display = 'none', 500);
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const closeBtn = document.querySelector('.close-btn');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.querySelector('i').classList.add('fa-bars');
+            hamburger.querySelector('i').classList.remove('fa-times');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Data
+        let allWallpapers = [
+            { id: 1, quote: "", image: "images/flux_krea_00001_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00028_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00053_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00069_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00287_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00290_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00293_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00291_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00297_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00299_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00300_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00347_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00348_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00440_.png", alt: "Image" },
+            { id: 2, quote: "", image: "images/flux_krea_00441_.png", alt: "Image" },
+
+
+        ];
+
+        // Render function
+        function renderGrid(containerId, wallpapers) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            wallpapers.forEach(wp => {
+                const card = document.createElement('div');
+                card.className = 'wallpaper-card fade-in';
+                card.innerHTML = `
+                    <div class="relative h-96 sm:h-80 bg-cover bg-center cursor-pointer" 
+                         style="background-image: url('${wp.image}');" 
+                         alt="${wp.alt}"
+                         onclick="openModal('${wp.image}', '${wp.quote}')">
+                        <div class="wallpaper-overlay absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white text-center px-4">${wp.quote}</h3>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex space-x-2">
+                            <button class="download-btn" onclick="event.stopPropagation(); downloadWithOverlay('${wp.image}', '${wp.quote}')">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </button>
+                            <button class="download-btn" onclick="event.stopPropagation(); openModal('${wp.image}', '${wp.quote}')">
+                                <i class="fas fa-eye mr-2"></i> See Image
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Download with Overlay
+        function downloadWithOverlay(imagePath, quote) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1920;
+            canvas.height = 1080;
+
+            const img = new Image();
+            img.src = imagePath;
+
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'rgba(0,0,0,0.6)';
+                ctx.fillRect(0, canvas.height - 150, canvas.width, 150);
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 60px Poppins';
+                ctx.textAlign = 'center';
+                ctx.fillText(quote, canvas.width / 2, canvas.height - 80);
+                const link = document.createElement('a');
+                link.download = `${quote.replace(/\s+/g, '_')}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+            img.onerror = () => {
+                alert('Oops! Image failed to load. Check if the image exists in the images/ folder.');
+            };
+        }
+
+        // Observer for fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid('gallery-grid', allWallpapers);
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+
+        // Modal functionality
+        function openModal(imagePath, quote) {
+            document.getElementById('modal-image').src = imagePath;
+            document.getElementById('modal-quote').textContent = quote;
+            document.getElementById('wallpaper-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('wallpaper-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'wallpaper-modal') {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+    <!-- Wallpaper Modal -->
+    <div id="wallpaper-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+        <!-- Close button container - always visible -->
+        <div class="fixed top-4 right-4 z-[9999]">
+            <button onclick="closeModal()"
+                class="bg-black bg-opacity-80 text-white text-2xl w-12 h-12 flex items-center justify-center rounded-full shadow-xl border border-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Main content container -->
+        <div class="min-h-screen w-full flex items-center justify-center p-4">
+            <div class="max-w-4xl w-full mx-auto">
+                <!-- Image container -->
+                <div class="flex flex-col items-center justify-center">
+                    <div class="w-full flex justify-center mb-6">
+                        <img id="modal-image" src="" alt="Wallpaper Preview"
+                            class="w-auto max-w-[90%] h-auto max-h-[50vh] sm:max-h-[70vh] object-contain shadow-xl rounded-lg">
+                    </div>
+
+                    <!-- Controls section -->
+                    <div class="w-full text-center mt-4 px-4">
+                        <h2 id="modal-quote" class="text-xl sm:text-2xl font-bold text-white mb-6"></h2>
+                        <button
+                            onclick="downloadWithOverlay(document.getElementById('modal-image').src, document.getElementById('modal-quote').textContent)"
+                            class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 mx-auto shadow-lg">
+                            <i class="fas fa-download mr-2"></i>
+                            <span>Download Wallpaper</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

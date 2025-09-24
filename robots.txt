@@ -1,0 +1,1 @@
+User-agent: * Allow: / Allow: /#gallery Allow: /#blog Allow: /#features Allow: /#about Allow: /#testimonials Allow: /#faq Allow: /#contact Sitemap: https://motivawall.com/sitemap.xml

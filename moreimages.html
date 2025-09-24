@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Motivational Wallpapers - MotivaWall</title>
+    <meta name="description"
+        content="Browse our complete collection of free black and white motivational wallpapers. Download high-quality designs for all your devices.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-black: #000000;
+            --primary-white: #FFFFFF;
+            --glow-color: rgba(255, 255, 255, 0.2);
+            --neon-glow: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            background-color: var(--primary-white);
+            color: var(--primary-black);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .wallpaper-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .wallpaper-card:hover .wallpaper-overlay {
+            opacity: 1;
+        }
+
+        .download-btn {
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--primary-white);
+            border-radius: 50px;
+            padding: 8px 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        .download-btn:hover {
+            background: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px var(--neon-glow);
+        }
+
+        /* Modal styles */
+        .modal-content {
+            animation: modalFadeIn 0.3s ease;
+            position: relative;
+            z-index: 55;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #wallpaper-modal {
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        #wallpaper-modal img {
+            transition: transform 0.3s ease;
+            max-width: 95vw;
+            object-fit: contain;
+        }
+
+        #wallpaper-modal img:hover {
+            transform: scale(1.02);
+        }
+
+        #wallpaper-modal button.fixed {
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        @media (max-width: 640px) {
+            #wallpaper-modal button.fixed {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto px-4 h-full">
+            <div class="flex justify-between items-center h-full">
+                <a href="index.html" class="text-gray-500 mt-12 text-2xl font-bold">MotivaWall</a>
+                <a href="index.html" class="download-btn">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center mb-6 text-black">All Wallpapers</h1>
+            <p class="text-center text-gray-600 mb-10 text-lg">Browse our complete collection of black and white
+                motivational wallpapers. Each design is crafted to inspire and motivate. Click to preview, download for
+                free, and transform your screen.</p>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic load -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallpaper Modal -->
+    <div id="wallpaper-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center">
+        <div class="modal-content relative max-w-7xl mx-auto p-4">
+            <button onclick="closeModal()" class="fixed top-8 right-8 bg-black bg-opacity-70 hover:bg-opacity-100 text-white hover:text-gray-300 text-4xl w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 z-[60]">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <img id="modal-image" src="" alt="Wallpaper Preview" class="max-h-[80vh] w-auto shadow-2xl rounded-lg">
+                <div class="mt-8 text-center z-[60]">
+                    <h2 id="modal-quote" class="text-3xl font-bold text-white mb-6"></h2>
+                    <button onclick="downloadWithOverlay(document.getElementById('modal-image').src, document.getElementById('modal-quote').textContent)" 
+                            class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
+                        <i class="fas fa-download"></i>
+                        <span>Download Wallpaper</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data
+        let allWallpapers = [
+            { id: 1, quote: "Rise Above the Storm", image: "images/1.jpg", alt: "Black and white motivational wallpaper with quote 'Rise Above the Storm' for resilience" },
+            { id: 2, quote: "Waves of Success", image: "images/2.jpg", alt: "Black and white ocean waves wallpaper with 'Waves of Success' quote for momentum" },
+            { id: 3, quote: "Grind in Silence", image: "images/3.jpg", alt: "Minimalist desert grind wallpaper with 'Grind in Silence' motivational quote" },
+            { id: 4, quote: "Chase Your Dreams", image: "images/4.jpg", alt: "Starry sky dream chase wallpaper in black and white with inspirational text" },
+            { id: 5, quote: "Hustle Mode On", image: "images/5.jpg", alt: "City hustle wallpaper with 'Hustle Mode On' quote for urban motivation" },
+            { id: 6, quote: "Dream Big Work Hard", image: "images/6.jpg", alt: "Forest dream big wallpaper in black and white for hard work inspiration" },
+            { id: 7, quote: "Success is Earned", image: "images/7.jpg", alt: "Peak mountain success wallpaper with 'Success is Earned' quote" },
+            { id: 8, quote: "Silent Wins", image: "images/8.jpg", alt: "Night sky silent wins wallpaper for quiet achievement motivation" },
+            { id: 9, quote: "Infinite Possibilities", image: "images/9.jpg", alt: "Universe infinite possibilities wallpaper in black and white" },
+            { id: 10, quote: "Victory Awaits", image: "images/10.jpg", alt: "Sunrise victory awaits wallpaper with motivational quote for triumph" }
+        ];
+
+        // Render function
+        function renderGrid(containerId, wallpapers) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            wallpapers.forEach(wp => {
+                const card = document.createElement('div');
+                card.className = 'wallpaper-card fade-in';
+                card.innerHTML = `
+                    <div class="relative h-96 sm:h-80 bg-cover bg-center cursor-pointer" 
+                         style="background-image: url('${wp.image}');" 
+                         alt="${wp.alt}"
+                         onclick="openModal('${wp.image}', '${wp.quote}')">
+                        <div class="wallpaper-overlay absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white text-center px-4">${wp.quote}</h3>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex space-x-2">
+                            <button class="download-btn" onclick="event.stopPropagation(); downloadWithOverlay('${wp.image}', '${wp.quote}')">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </button>
+                            <button class="download-btn" onclick="event.stopPropagation(); openModal('${wp.image}', '${wp.quote}')">
+                                <i class="fas fa-eye mr-2"></i> See Image
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Download with Overlay
+        function downloadWithOverlay(imagePath, quote) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1920;
+            canvas.height = 1080;
+
+            const img = new Image();
+            img.src = imagePath;
+
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'rgba(0,0,0,0.6)';
+                ctx.fillRect(0, canvas.height - 150, canvas.width, 150);
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 60px Poppins';
+                ctx.textAlign = 'center';
+                ctx.fillText(quote, canvas.width / 2, canvas.height - 80);
+                const link = document.createElement('a');
+                link.download = `${quote.replace(/\s+/g, '_')}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+            img.onerror = () => {
+                alert('Oops! Image failed to load. Check if the image exists in the images/ folder.');
+            };
+        }
+
+        // Modal functionality
+        function openModal(imagePath, quote) {
+            document.getElementById('modal-image').src = imagePath;
+            document.getElementById('modal-quote').textContent = quote;
+            document.getElementById('wallpaper-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('wallpaper-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'wallpaper-modal') {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Observer for fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid('gallery-grid', allWallpapers);
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
